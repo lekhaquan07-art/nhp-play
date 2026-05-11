@@ -1,0 +1,251 @@
+<div class="bio-container">
+
+    <div class="profile">
+
+        <div class="avatar-rgb">
+            <img src="https://i.imgur.com/Y8Ptf2v.jpeg">
+        </div>
+
+        <h1>NHP PLAY</h1>
+        <p>Mods Play Together</p>
+    </div>
+
+    <div class="voucher-box" onclick="openRandomLink()">
+        🎁 NHẬN VOUCHER HOT
+    </div>
+
+    <div class="accordion">
+
+        <button class="menu">🔥 Link Tải Mods Và Mua Key <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="https://modzone.vn/" target="_blank">🌐 Modzone.vn</a>
+        </div>
+
+        <button class="menu">💬 Nhóm Hỗ Trợ Và Giao Lưu <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="https://zalo.me/84931056841">👨‍💻 Zalo Admin</a>
+            <a href="https://zalo.me/g/ejufle686">📢 Nhóm Thông Báo</a>
+            <a href="https://zalo.me/g/esfogb190">🎮 Nhóm Giao Lưu</a>
+        </div>
+
+        <button class="menu">🔑 Vượt Link Lấy Key Miễn Phí <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="https://hackviet.io/free-key/gtb">🚀 Link Get Key</a>
+            <a href="https://youtu.be/Pk6hguWMCjc?si=eTjqrdwfKSuxDIf_">▶️ Video Hướng Dẫn</a>
+        </div>
+
+        <button class="menu">🛒 Shop Cày Thuê - Bán Acc <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="http://bitashop.vn/">💎 Bitashop.vn</a>
+        </div>
+
+        <button class="menu">🐟 Bản ID Cá <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="#">📂 Xem Bản ID Cá</a>
+        </div>
+
+    </div>
+</div>
+
+<style>
+body{
+    background:#070707;
+    font-family:Arial;
+}
+
+/* 🔥 KHÔI PHỤC VIỀN NGOÀI RGB */
+.bio-container{
+    width:350px;
+    margin:30px auto;
+    position:relative;
+    padding:2px;
+    border-radius:22px;
+}
+
+.bio-container::before{
+    content:"";
+    position:absolute;
+    inset:-4px;
+    border-radius:24px;
+    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
+    background-size:400%;
+    animation:led 6s linear infinite;
+    filter:blur(6px);
+    z-index:-1;
+}
+
+.bio-container::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:20px;
+    background:#070707;
+    z-index:-1;
+}
+
+/* AVATAR */
+.avatar-rgb{
+    width:130px;
+    height:130px;
+    margin:0 auto;
+    border-radius:50%;
+    position:relative;
+}
+
+.avatar-rgb::before{
+    content:"";
+    position:absolute;
+    inset:-4px;
+    border-radius:50%;
+    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
+    background-size:400%;
+    animation:led 6s linear infinite;
+    filter:blur(5px);
+    z-index:0;
+}
+
+.avatar-rgb img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    position:relative;
+    z-index:1;
+    border:3px solid #111;
+}
+
+/* PROFILE */
+.profile{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.profile h1{
+    color:white;
+    font-size:32px;
+    text-shadow:0 0 10px #00ffe1,0 0 20px #ff00ff;
+}
+
+.profile p{
+    color:#00ffe1;
+}
+
+/* VOUCHER */
+.voucher-box{
+    background:linear-gradient(45deg,#ff00ff,#00ffe1);
+    color:white;
+    text-align:center;
+    padding:16px;
+    border-radius:15px;
+    margin-bottom:20px;
+    font-weight:bold;
+    cursor:pointer;
+    animation:pulse 2s infinite;
+}
+
+/* MENU */
+.menu{
+    width:100%;
+    background:#111;
+    color:white;
+    padding:16px;
+    margin-top:15px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:17px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border:1px solid #00ffe1;
+}
+
+.menu:hover{
+    background:#00ffe1;
+    color:black;
+}
+
+/* ARROW */
+.arrow{
+    transition:0.3s;
+}
+
+.menu.active .arrow{
+    transform:rotate(90deg);
+}
+
+/* CONTENT */
+.content{
+    max-height:0;
+    overflow:hidden;
+    transition:0.5s;
+    background:#0d0d0d;
+    border-radius:0 0 15px 15px;
+}
+
+.content a{
+    display:block;
+    padding:14px 20px;
+    color:#ccc;
+    text-decoration:none;
+}
+
+.content a:hover{
+    color:#00ffe1;
+    padding-left:25px;
+}
+
+/* ANIM */
+@keyframes led{
+    0%{background-position:0%;}
+    100%{background-position:400%;}
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 10px #ff00ff;}
+    50%{box-shadow:0 0 25px #00ffe1;}
+    100%{box-shadow:0 0 10px #ff00ff;}
+}
+</style>
+
+<script>
+document.querySelectorAll(".menu").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+
+        const content=btn.nextElementSibling;
+        btn.classList.toggle("active");
+
+        if(content.style.maxHeight){
+            content.style.maxHeight=null;
+        }else{
+            content.style.maxHeight=content.scrollHeight+"px";
+        }
+
+    });
+});
+
+const affLinks=[
+"https://example1.com",
+"https://example2.com",
+"https://example3.com"
+];
+
+let used=[];
+
+function openRandomLink(){
+
+    if(used.length>=affLinks.length){
+        used=[];
+    }
+
+    let pool=affLinks.filter(x=>!used.includes(x));
+
+    let r=pool[Math.floor(Math.random()*pool.length)];
+
+    used.push(r);
+
+    window.open(r,"_blank");
+}
+</script>
