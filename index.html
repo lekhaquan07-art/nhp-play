@@ -1,76 +1,56 @@
-<div class="bio-container">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
 
-    <div class="profile">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="avatar-rgb">
-            <img src="https://i.imgur.com/Y8Ptf2v.jpeg">
-        </div>
-
-        <h1>NHP PLAY</h1>
-        <p>Mods Play Together</p>
-    </div>
-
-    <div class="voucher-box" onclick="openRandomLink()">
-        🎁 NHẬN VOUCHER HOT
-    </div>
-
-    <div class="accordion">
-
-        <button class="menu">🔥 Link Tải Mods Và Mua Key <span class="arrow">▶</span></button>
-        <div class="content">
-            <a href="https://modzone.vn/" target="_blank">🌐 Modzone.vn</a>
-        </div>
-
-        <button class="menu">💬 Nhóm Hỗ Trợ Và Giao Lưu <span class="arrow">▶</span></button>
-        <div class="content">
-            <a href="https://zalo.me/84931056841">👨‍💻 Zalo Admin</a>
-            <a href="https://zalo.me/g/ejufle686">📢 Nhóm Thông Báo</a>
-            <a href="https://zalo.me/g/esfogb190">🎮 Nhóm Giao Lưu</a>
-        </div>
-
-        <button class="menu">🔑 Vượt Link Lấy Key Miễn Phí <span class="arrow">▶</span></button>
-        <div class="content">
-            <a href="https://hackviet.io/free-key/gtb">🚀 Link Get Key</a>
-            <a href="https://youtu.be/Pk6hguWMCjc?si=eTjqrdwfKSuxDIf_">▶️ Video Hướng Dẫn</a>
-        </div>
-
-        <button class="menu">🛒 Shop Cày Thuê - Bán Acc <span class="arrow">▶</span></button>
-        <div class="content">
-            <a href="http://bitashop.vn/">💎 Bitashop.vn</a>
-        </div>
-
-        <button class="menu">🐟 Bản ID Cá <span class="arrow">▶</span></button>
-        <div class="content">
-            <a href="#">📂 Xem Bản ID Cá</a>
-        </div>
-
-    </div>
-</div>
+<title>NHP PLAY</title>
 
 <style>
+
+*{
+    margin:0;
+    paddinging:0;
+    box-sizing:border-box;
+}
+
 body{
     background:#070707;
-    font-family:Arial;
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    paddinging:12px;
 }
 
-/* 🔥 KHÔI PHỤC VIỀN NGOÀI RGB */
+/* CONTAINER */
 .bio-container{
-    width:350px;
-    margin:30px auto;
+    widthidth:100%;
+    max-width:100%;
+    margin:auto;
     position:relative;
-    padding:2px;
-    border-radius:22px;
+    paddinging:4px;
+    border-radius:25px;
 }
 
+/* RGB BORDER */
 .bio-container::before{
     content:"";
     position:absolute;
     inset:-4px;
-    border-radius:24px;
-    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
+    border-radius:28px;
+
+   -background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff00ff,
+        #00ffe1,
+        #00ff00,
+        #ff0000
+    );
+
     background-size:400%;
     animation:led 6s linear infinite;
-    filter:blur(6px);
+    filter:blur(8px);
     z-index:-1;
 }
 
@@ -78,16 +58,22 @@ body{
     content:"";
     position:absolute;
     inset:2px;
-    border-radius:20px;
+    border-radius:22px;
     background:#070707;
     z-index:-1;
 }
 
+/* PROFILE */
+.profile{
+    text-align:center;
+    paddinging:25px 15px;
+}
+
 /* AVATAR */
 .avatar-rgb{
-    width:130px;
-    height:130px;
-    margin:0 auto;
+    widthth:180px;
+    height:180px;
+    margin:auto;
     border-radius:50%;
     position:relative;
 }
@@ -95,39 +81,49 @@ body{
 .avatar-rgb::before{
     content:"";
     position:absolute;
-    inset:-4px;
+    inset:-5px;
     border-radius:50%;
-    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
+
+   -background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff00ff,
+        #00ffe1,
+        #00ff00,
+        #ff0000
+    );
+
     background-size:400%;
     animation:led 6s linear infinite;
-    filter:blur(5px);
+    filter:blur(7px);
     z-index:0;
 }
 
 .avatar-rgb img{
-    width:100%;
+    widthth:100%;
     height:100%;
     border-radius:50%;
     object-fit:cover;
     position:relative;
     z-index:1;
-    border:3px solid #111;
+    border:4px solid #111;
 }
 
-/* PROFILE */
-.profile{
-    text-align:center;
-    margin-bottom:25px;
-}
-
+/* TITLE */
 .profile h1{
     color:white;
-    font-size:32px;
-    text-shadow:0 0 10px #00ffe1,0 0 20px #ff00ff;
+    font-size:42px;
+    margin-top:20px;
+
+    text-shadow:
+        0 0 10px #00ffe1,
+        0 0 20px #ff00ff;
 }
 
 .profile p{
     color:#00ffe1;
+    font-size:18px;
+    margin-top:8px;
 }
 
 /* VOUCHER */
@@ -135,31 +131,35 @@ body{
     background:linear-gradient(45deg,#ff00ff,#00ffe1);
     color:white;
     text-align:center;
-    padding:16px;
-    border-radius:15px;
+    paddinging:22px;
+    border-radius:18px;
     margin-bottom:20px;
     font-weight:bold;
+    font-size:20px;
     cursor:pointer;
+
     animation:pulse 2s infinite;
 }
 
 /* MENU */
 .menu{
-    width:100%;
+    widthth:100%;
     background:#111;
     color:white;
-    padding:16px;
-    margin-top:15px;
+    padding:20px;
+    margin-top:16px;
     border:none;
-    border-radius:15px;
+    border-radius:18px;
     cursor:pointer;
-    font-size:17px;
+    font-size:18px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     border:1px solid #00ffe1;
+
+    transition:0.3s;
 }
 
 .menu:hover{
@@ -179,98 +179,177 @@ body{
 /* CONTENT */
 .content{
     max-height:0;
-    overflow:hidden;
+;
+   -overflow:hidden;
     transition:0.5s;
     background:#0d0d0d;
-    border-radius:0 0 15px 15px;
+    border-radius:0 0 18px 18px;
 }
 
 .content a{
     display:block;
-    padding:14px 20px;
+    paddinging:18px 20px;
     color:#ccc;
     text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
 }
 
 .content a:hover{
     color:#00ffe1;
-    padding-left:25px;
+    paddinging-left:28px;
 }
 
-/* ANIM */
+/* RGB */
 @keyframes led{
-    0%{background-position:0%;}
-    100%{background-position:400%;}
+
+    0%{
+        background-position:0%;
+;
+    }
+
+
+
+    100%{
+        background-position:400%;
+;
+    }
+
+
+
 }
 
+/* PULSE */
 @keyframes pulse{
-    0%{box-shadow:0 0 10px #ff00ff;}
-    50%{box-shadow:0 0 25px #00ffe1;}
-    100%{box-shadow:0 0 10px #ff00ff;}
+
+    0%{
+       -box-shadow:0 0 10px #ff00ff;
+    }
+
+   
+
+    50%{
+        box-shadow:0 0 30px #00ffe1;
+    }
+
+
+
+    100%{
+       -box-shadow:0 0 10px #ff00ff;
+    }
+
 }
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .profile h1{
+        font-size:38px;
+    }
+
+    .avatar-rgb{
+        widthth:170px;
+        height:170px;
+    }
+
+
+
+    .menu{
+        font-size:17px;
+        paddinging:18px;
+    }
+
+
+
+}
+
 </style>
+</head>
+
+<body>
+
+<div class="bio-container">
+
+    <div class="profile">
+
+        <div class="avatar-rgb">
+            <img src="https://i.imgur.com/Y8Ptf2v.jpeg">
+        </div>
+
+       -h1>NHP PLAY</h1>
+        <p>Mods Play Together</p>
+
+    </div>
+
+    <div class="oucher-box" onclick="openRandomLink()">
+        🎁 NHẬN VOUCHER HOT
+    </div>
+
+    <div class="accordion">
+
+        <button class="menu">
+            🔥 Link Tải Mods Và Mua Key
+            <span class="arrow">▶</span>
+        </button>
+
+        <div class="content">
+            <a href="https://modzone.vn/" target="_blank">
+                🌐 Modzone.vn
+            </a>
+        </div>
+
+        <button class="menu">
+            💬 Nhóm Hỗ Trợ Và Giao Lưu
+            <span class="arrow">▶</span>
+        </button>
+
+        <div class="content">
+            <a href="https://zalo.me/84931056841" target="_blank">
+                👨‍💻 Zalo Admin
+            </a>
+
+            <a href="https://zalo.me/g/ejufle686" target="_blank">
+                📢 Nhóm Thông Báo
+            </a>
+
+            <a href="https://zalo.me/g/esfogb190" target="_blank">
+                🎮 Nhóm Giao Lưu
+            </a>
+        </div>
+
+    </div>
+
+</div>
 
 <script>
+
 document.querySelectorAll(".menu").forEach(btn=>{
+
     btn.addEventListener("click",()=>{
 
         const content=btn.nextElementSibling;
+
         btn.classList.toggle("active");
 
         if(content.style.maxHeight){
             content.style.maxHeight=null;
         }else{
-            content.style.maxHeight=content.scrollHeight+"px";
+            content.style.maxHeight=
+            content.scrollHeight+"px";
         }
 
     });
+
 });
 
-const affLinks = [
+const affLinks=[
 
 "https://vt.tiktok.com/ZS9Fq7aFgeyGK-vEsMM/",
 "https://vt.tiktok.com/ZS9FqcN79evrx-BVpAx/",
 "https://vt.tiktok.com/ZS9FqcjGohs3W-RrGag/",
 "https://vt.tiktok.com/ZS9FqcPX33eM2-SBJ5N/",
 "https://vt.tiktok.com/ZS9FqcP1hk6dU-gtJz0/",
-"https://vt.tiktok.com/ZS9FqcHdTsLWC-ZDalx/",
-"https://vt.tiktok.com/ZS9FqcVbncnqR-oJiOp/",
-"https://vt.tiktok.com/ZS9FqcTv6qVHV-kLC8h/",
-"https://vt.tiktok.com/ZS9Fq3dP5Mq45-aHhpL/",
-"https://vt.tiktok.com/ZS9Fq3FgfyvTh-FXcFk/",
-"https://vt.tiktok.com/ZS9Fq3rDEsQXG-Laxh8/",
-"https://vt.tiktok.com/ZS9Fq3rcrEckg-M2pIc/",
-"https://vt.tiktok.com/ZS9Fq3aoxoLY1-vtyrE/",
-"https://vt.tiktok.com/ZS9Fq39svDGQn-e66ru/",
-"https://vt.tiktok.com/ZS9Fq3QgcG9hV-l3baX/",
-"https://vt.tiktok.com/ZS9Fq3bXHsJuB-apI7g/",
-"https://vt.tiktok.com/ZS9Fq3tss9MMs-ukoSE/",
-"https://vt.tiktok.com/ZS9Fq3TH4odGd-RixuH/",
-"https://vt.tiktok.com/ZS9FqTJ6uWqvM-Egmdl/",
-"https://vt.tiktok.com/ZS9FqTa3mTFXg-IymZD/",
-"https://vt.tiktok.com/ZS9FqT9Qw4SGH-wVvWL/",
-"https://vt.tiktok.com/ZS9FqTxq88mGu-xFnfN/",
-"https://vt.tiktok.com/ZS9FqTxsBUfgM-4hFcO/",
-"https://vt.tiktok.com/ZS9FqT4HUbuXK-rPSKj/",
-"https://vt.tiktok.com/ZS9Fqw1Hn3S88-6CmxA/",
-"https://vt.tiktok.com/ZS9FqwRvE3kEK-zco66/",
-"https://vt.tiktok.com/ZS9FqwRPejUSa-DYrAe/",
-"https://vt.tiktok.com/ZS9FqwjeYMTs2-VT9ZP/",
-"https://vt.tiktok.com/ZS9FqwhwCjddL-R5Xbf/",
-"https://vt.tiktok.com/ZS9Fqw6D5pQwo-QivWm/",
-"https://vt.tiktok.com/ZS9FqwAwFsK3o-5ZWjl/",
-"https://vt.tiktok.com/ZS9Fqwy8WUud9-DTcTe/",
-"https://vt.tiktok.com/ZS9FqwyC6vhDt-ycbxR/",
-"https://vt.tiktok.com/ZS9Fqw9M5ckCj-HH3Dn/",
-"https://vt.tiktok.com/ZS9Fqw4UvyXto-lCvjF/",
-"https://vt.tiktok.com/ZS9FqwqSpov27-ai6YB/",
-"https://vt.tiktok.com/ZS9FqwpYY1d1B-tTVJR/",
-"https://vt.tiktok.com/ZS9Fqwtqw7Cbe-bbByW/",
-"https://vt.tiktok.com/ZS9FqwWuJcuGu-TvsbP/",
-"https://vt.tiktok.com/ZS9FqwWdQyMGU-WlU8o/",
-"https://vt.tiktok.com/ZS9FqKRe8koGo-vTh5b/",
-"https://vt.tiktok.com/ZS9FqK1c91aaN-XKoOM/",
-"https://vt.tiktok.com/ZS9FqKR4rEemV-li1qV/"
+"https://vt.tiktok.com/ZS9FqcHdTsLWC-ZDalx/"
 
 ];
 
@@ -282,12 +361,19 @@ function openRandomLink(){
         used=[];
     }
 
-    let pool=affLinks.filter(x=>!used.includes(x));
+    let pool=
+    affLinks.filter(x=>!used.includes(x));
 
-    let r=pool[Math.floor(Math.random()*pool.length)];
+    let r=
+    pool[Math.floor(Math.random()*pool.length)];
 
     used.push(r);
 
     window.open(r,"_blank");
+
 }
+
 </script>
+
+</body>
+</html>
