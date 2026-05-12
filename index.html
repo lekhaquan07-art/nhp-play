@@ -23,7 +23,7 @@ body{
 /* CONTAINER */
 .bio-container{
     width:100%;
-    max-width:500px;
+    max-width:520px;
     margin:auto;
     position:relative;
     padding:4px;
@@ -36,14 +36,7 @@ body{
     position:absolute;
     inset:-4px;
     border-radius:28px;
-    background:linear-gradient(
-        90deg,
-        #ff0000,
-        #ff00ff,
-        #00ffe1,
-        #00ff00,
-        #ff0000
-    );
+    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
     background-size:400%;
     animation:led 6s linear infinite;
     filter:blur(8px);
@@ -79,14 +72,7 @@ body{
     position:absolute;
     inset:-5px;
     border-radius:50%;
-    background:linear-gradient(
-        90deg,
-        #ff0000,
-        #ff00ff,
-        #00ffe1,
-        #00ff00,
-        #ff0000
-    );
+    background:linear-gradient(90deg,#ff0000,#ff00ff,#00ffe1,#00ff00,#ff0000);
     background-size:400%;
     animation:led 6s linear infinite;
     filter:blur(7px);
@@ -103,7 +89,7 @@ body{
     border:4px solid #111;
 }
 
-/* TITLE */
+/* TEXT */
 .profile h1{
     color:#fff;
     font-size:38px;
@@ -164,7 +150,6 @@ body{
     transform:rotate(90deg);
 }
 
-
 /* CONTENT */
 .content{
     max-height:0;
@@ -207,12 +192,14 @@ body{
 <div class="bio-container">
 
     <div class="profile">
+
         <div class="avatar-rgb">
             <img src="https://i.imgur.com/Y8Ptf2v.jpeg">
         </div>
 
         <h1>NHP PLAY</h1>
         <p>Mods Play Together</p>
+
     </div>
 
     <div class="voucher-box" onclick="openRandomLink()">
@@ -221,9 +208,32 @@ body{
 
     <div class="accordion">
 
-        <button class="menu">🔥 Link Mods <span class="arrow">▶</span></button>
+        <button class="menu">🔥 Link Tải Mods Và Mua Key <span class="arrow">▶</span></button>
         <div class="content">
-            <a href="https://modzone.vn/" target="_blank">Modzone.vn</a>
+            <a href="https://modzone.vn/" target="_blank">🌐 Modzone.vn</a>
+        </div>
+
+        <button class="menu">💬 Nhóm Hỗ Trợ Và Giao Lưu <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="https://zalo.me/84931056841">👨‍💻 Zalo Admin</a>
+            <a href="https://zalo.me/g/ejufle686">📢 Nhóm Thông Báo</a>
+            <a href="https://zalo.me/g/esfogb190">🎮 Nhóm Giao Lưu</a>
+        </div>
+
+        <button class="menu">🔑 Vượt Link Lấy Key Miễn Phí <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="https://hackviet.io/free-key/gtb">🚀 Link Get Key</a>
+            <a href="https://youtu.be/Pk6hguWMCjc?si=eTjqrdwfKSuxDIf_">▶️ Video Hướng Dẫn</a>
+        </div>
+
+        <button class="menu">🛒 Shop Cày Thuê - Bán Acc <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="http://bitashop.vn/">💎 Bitashop.vn</a>
+        </div>
+
+        <button class="menu">🐟 Bản ID Cá <span class="arrow">▶</span></button>
+        <div class="content">
+            <a href="#">📂 Xem Bản ID Cá</a>
         </div>
 
     </div>
@@ -250,7 +260,9 @@ document.querySelectorAll(".menu").forEach(btn=>{
 const affLinks = [
 "https://vt.tiktok.com/ZS9Fq7aFgeyGK-vEsMM/",
 "https://vt.tiktok.com/ZS9FqcN79evrx-BVpAx/",
-"https://vt.tiktok.com/ZS9FqcjGohs3W-RrGag/"
+"https://vt.tiktok.com/ZS9FqcjGohs3W-RrGag/",
+"https://vt.tiktok.com/ZS9FqcPX33eM2-SBJ5N/",
+"https://vt.tiktok.com/ZS9FqcP1hk6dU-gtJz0/"
 ];
 
 let used = [];
